@@ -1,0 +1,66 @@
+
+{
+  "manifest_version": 3,
+  "name": "Kids Safe Search Filter",
+  "version": "1.0",
+  "description": "An extension to classify images as violent or non-violent.",
+  "permissions": [
+    "activeTab",
+    "storage"
+  ],
+  "action": {
+    "default_popup": "index.html",
+    "default_icon": {
+      "128": "./assets/icon.png",
+      "48": "./assets/icon.png",
+      "16": "./assets/icon.png"
+    }
+  },
+  "icons": {
+      "128": "./assets/icon.png",
+      "48": "./assets/icon.png",
+      "16": "./assets/icon.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["background.js"]
+    }
+  ],
+
+  
+  "web_accessible_resources": [
+    {
+        "resources": [
+            "savedmodelfolder/model.json",
+            "savedmodelfolder/group1-shard1of24.bin",
+            "savedmodelfolder/group1-shard2of24.bin",
+            "savedmodelfolder/group1-shard3of24.bin",
+            "savedmodelfolder/group1-shard4of24.bin",
+            "savedmodelfolder/group1-shard5of24.bin",
+            "savedmodelfolder/group1-shard6of24.bin",
+            "savedmodelfolder/group1-shard7of24.bin",
+            "savedmodelfolder/group1-shard8of24.bin",
+            "savedmodelfolder/group1-shard9of24.bin",
+            "savedmodelfolder/group1-shard10of24.bin",
+            "savedmodelfolder/group1-shard11of24.bin",
+            "savedmodelfolder/group1-shard12of24.bin",
+            "savedmodelfolder/group1-shard13of24.bin",
+            "savedmodelfolder/group1-shard14of24.bin",
+            "savedmodelfolder/group1-shard15of24.bin",
+            "savedmodelfolder/group1-shard16of24.bin",
+            "savedmodelfolder/group1-shard17of24.bin",
+            "savedmodelfolder/group1-shard18of24.bin",
+            "savedmodelfolder/group1-shard19of24.bin",
+            "savedmodelfolder/group1-shard20of24.bin",
+            "savedmodelfolder/group1-shard21of24.bin",
+            "savedmodelfolder/group1-shard22of24.bin",
+            "savedmodelfolder/group1-shard23of24.bin",
+            "savedmodelfolder/group1-shard24of24.bin"
+        ],
+        "matches": [],
+        
+        "css": []
+    }
+]
+}
